@@ -1,0 +1,9 @@
+#!/bin/sh
+
+find -name MANIFEST -exec rm -v {} \;
+
+touch MANIFEST
+
+find -type f | sed s/..// > MANIFEST
+
+echo built new MANIFEST

@@ -1,0 +1,122 @@
+0.32:  Tue Nov 14 10:07:12 EST 2000
+   - jettero got doc stubs in each of the modules. Pretty
+     thin docs though...
+
+0.31:  Tue Nov 14 08:43:04 EST 2000
+   - jettero got some documentation done, and thanked qi3ber
+     for his gtk help. ;)
+
+0.30:  Mon Nov 13 18:53:33 EST 2000
+   - jettero mae some qi3ber type changes
+
+0.29:  Mon Nov 13 08:41:27 EST 2000
+   - jettero tried some ssh port forwardings, but neither
+     the mysql client nor mine can connect to anything but
+     3306. I suspect it's a problem with the API...
+
+0.28:  Mon Nov 13 02:09:48 EST 2000
+   - jettero wish the wait messages would work at all
+
+0.27:  Mon Nov 13 02:09:39 EST 2000
+   - jettero got the warning code to work again ...
+
+0.26:  Mon Nov 13 01:22:14 EST 2000
+   - jettero got some truly usefull things to happen.
+     Including, but not limited to, the new column naming
+     routines.
+
+0.25:  Mon Nov 13 00:45:25 EST 2000
+   - jettero redid the callbacks a little... they can take
+     args now (good for OO programming ;) )...
+
+0.24:  Sun Nov 12 19:24:04 EST 2000
+   - jettero got connection/connection.pm to be perfectly
+     useable for selects!
+
+0.23:  Sun Nov 12 19:23:49 EST 2000
+   - jettero installed a history feature...
+
+0.22:  Sat Nov 11 10:15:09 EST 2000
+   - jettero set up some database table/field functions in
+     the connection/
+
+0.21:  Sat Nov 11 09:53:02 EST 2000
+   - jettero got connection.pm to accept/clear queries, and
+     update the history intellegently!
+
+0.20:  Sat Nov 11 05:18:26 EST 2000
+   - jettero got connector.pm to catch the combo box input
+
+0.19:  Sat Nov 11 05:17:39 EST 2000
+   - jettero implemented two error functions; :), one in
+     each of the */c*.pm's
+
+0.18:  Fri Nov 10 21:35:53 EST 2000
+   - jettero got connection/connection.pm to actuall fill
+     out it's defaults right!
+
+0.17:  Fri Nov 10 20:44:43 EST 2000
+   - jettero upgraded the t/ programs
+
+0.16:  Fri Nov 10 18:40:06 EST 2000
+   - jettero upgraded this
+
+0.15:  Fri Nov 10 10:35:51 EST 2000
+   - jettero installed the connection.pm window object. It
+     doesn't do anything yet.
+
+0.14:  Fri Nov 10 08:26:30 EST 2000
+   - jettero got huge stuff doen with connecting and errors
+     and things
+
+0.13:  Fri Nov 10 07:48:56 EST 2000
+   - jettero got connector.pm's buttons to do usefull
+     things!
+
+0.12:  Thu Nov  9 13:26:41 EST 2000
+   - jettero got some good .t's and stuff set up
+
+0.11:  Thu Nov  9 13:26:30 EST 2000
+   - jettero got a shatload of stuff done on the connector.
+     new/exit/show
+
+0.10:  Thu Nov  9 09:45:24 EST 2000
+   - jettero got connector/dbase/ to be a little more
+     intellegent about the .my.cnf, it's still pretty
+     stupid, but no worse than mysqladmin ...
+
+0.09:  Thu Nov  9 08:42:47 EST 2000
+   - jettero started my t/menu.t test and the connector/
+     core code
+
+0.08:  Thu Nov  9 08:31:33 EST 2000
+   - jettero created connector/
+
+0.07:  Thu Nov  9 08:31:30 EST 2000
+   - jettero moved dbase under connector/
+
+0.06:  Thu Nov  9 07:31:45 EST 2000
+   - jettero got my prereqs right
+
+0.05:  Wed Nov  8 22:51:49 EST 2000
+   - jettero got the t/ dirs setup
+
+0.04:  Wed Nov  8 22:51:42 EST 2000
+   - jettero got the dbase suite decked out ...
+
+0.03:  Wed Nov  8 14:25:56 EST 2000
+   - jettero cleaned up the h2xs stuff so it's the way I
+     like it.
+
+0.02:  Wed Nov  8 14:24:42 EST 2000
+   - jettero configured my versioning system
+
+:  Wed Nov  8 14:22:11 EST 2000
+   - jettero added my versioning stuff
+
+Revision history for Perl extension MySQL::GUI.
+
+0.01  Wed Nov  8 14:14:02 2000
+        - original version; created by h2xs 1.20 with
+          options -n MySQL::GUI -X
+

@@ -1,0 +1,40 @@
+#!/usr/bin/perl
+
+$found = 0; 
+
+@files = `find -name \\*.pm -mindepth 1 | grep -v blib`;
+chomp @files;
+
+foreach $file (@files) {
+    open in,  "$file";
+    open out, ">$file.$$";
+
+    while(<in>) { 
+        if(/head1 Also See/ or /head1 SEE ALSO/) { 
+            $found = 1; 
+            print out "$_"; 
+            next; 
+        } 
+        if($found and /\w+/) { 
+            @a = ( "perl(1)", "MySQL::GUI(3)" ); 
+            @f = `find -name \\*.pm -mindepth 2 | grep -v blib`;
+            foreach(@f) {
+                my @c = ();
+                while(m|(\w+)/|g) {
+                    push @c, $1 if $c[$#c] ne $1;
+                }
+                #print "[@c]\n";
+                my $c = join "::", @c;
+                push @a, "MySQL::GUI::$c(3)";
+            }
+            $s = join ", ", @a; 
+            #print     "$s.\n";
+            print out "$s.\n"; 
+            $found = 0; 
+        } else {
+            print out "$_";
+        }
+    }
+    close in;
+    close out; `mv $file.$$ $file`;
+}

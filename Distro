@@ -1,0 +1,27 @@
+#!/bin/sh
+
+if [ ! -d ../archives ]; then
+    echo looser ...
+    exit 1
+fi
+
+./distclean
+perl Makefile.PL && make dist
+
+if [ -d ~/www/PerlModules ]; then
+    n=`ls My*gz`;
+    date=`date`;
+    cat GUI.pm | pod2html > ~/www/PerlModules/GUI.html
+    rm -vf pod* ~/www/PerlModules/My*gz
+    cp -v My*gz ~/www/PerlModules
+cat > ~/www/PerlModules/GUI.b.html << EOF
+<p>
+This doesn't work yet.  It will (in the future) load up 
+glorious mysql client menus and things. :)
+<a href="?eo_cat=GUI.html">MySQL::GUI module</a> (<a href="$n">$n</a>).
+Last updated on $date
+EOF
+    chmod -v 644 ~/www/PerlModules/GUI.* ~/www/PerlModules/My*gz
+fi
+
+mv -v  My*gz ../archives
