@@ -19,3 +19,4 @@ t/load_window.t
 makeitromscratch
 GUI.pm
 fix_alsos
+README

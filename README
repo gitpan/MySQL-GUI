@@ -1,0 +1,6 @@
+This isn't really useable yet.
+It's a pre-release.
+
+That said, 
+
+perl -MMySQL::GUI -e "MySQL::GUI->new->go"
